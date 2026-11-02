@@ -1,0 +1,23 @@
+<section class="sec" id="experience" data-node="1">
+  <div class="col">
+    <p class="eyebrow"><span class="verb">GET</span> /experience</p>
+    <h2>Where I work now</h2>
+    <article class="panel block">
+      <div class="block-head">
+        <h3>{{ job.company }}</h3>
+        <span class="meta">{{ job.period }}</span>
+      </div>
+      <p class="role">{{ job.role }}</p>
+      <ul class="list">
+        @for (point of job.points; track point) {
+          <li>{{ point }}</li>
+        }
+      </ul>
+      <ul class="chips" aria-label="Modules shipped">
+        @for (module of job.modules; track module) {
+          <li class="chip">{{ module }}</li>
+        }
+      </ul>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<nav class="trace" aria-label="Sections">
+  <ul>
+    @for (item of items; track item.id; let i = $index) {
+      <li>
+        <a [href]="'#' + item.id" [class.on]="spy.activeIndex() === i"><span>{{ item.label }}</span></a>
+      </li>
+    }
+  </ul>
+</nav>

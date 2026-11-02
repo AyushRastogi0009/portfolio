@@ -1,0 +1,20 @@
+<section class="sec" id="wins" data-node="4">
+  <div class="col">
+    <p class="eyebrow"><span class="verb">GET</span> /wins</p>
+    <h2>Hackathons and contests</h2>
+    <div class="panel block">
+      <ul class="wins">
+        @for (item of items; track item.title) {
+          <li>
+            <span class="tag">{{ item.tag }}</span>
+            <div>
+              <strong>{{ item.title }}</strong>
+              <span>{{ item.detail }}</span>
+            </div>
+          </li>
+        }
+      </ul>
+      <p class="also">{{ also }}</p>
+    </div>
+  </div>
+</section>

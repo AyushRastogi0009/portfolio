@@ -1,0 +1,44 @@
+<section class="sec" id="projects" data-node="2">
+  <div class="col wide">
+    <p class="eyebrow"><span class="verb">GET</span> /projects</p>
+    <h2>Things I built</h2>
+
+    @for (project of projects; track project.name) {
+      <article class="panel block">
+        <div class="block-head">
+          <h3>{{ project.name }}</h3>
+          @if (project.meta) {
+            <span class="meta">{{ project.meta }}</span>
+          }
+        </div>
+
+        <ul class="chips top" aria-label="Tech stack">
+          @for (tech of project.stack; track tech) {
+            <li class="chip">{{ tech }}</li>
+          }
+        </ul>
+
+        @if (project.intro) {
+          <p class="proj-intro">{{ project.intro }}</p>
+        }
+
+        @if (project.flow; as flow) {
+          <ol class="flow" [attr.aria-label]="flow.label">
+            @for (step of flow.steps; track step.title) {
+              <li><strong>{{ step.title }}</strong><span>{{ step.text }}</span></li>
+            }
+          </ol>
+        }
+
+        <dl class="mods">
+          @for (module of project.modules; track module.title) {
+            <div>
+              <dt>{{ module.title }}</dt>
+              <dd>{{ module.text }}</dd>
+            </div>
+          }
+        </dl>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="sec" id="stack" data-node="3">
+  <div class="col wide">
+    <p class="eyebrow"><span class="verb">GET</span> /Tech stack</p>
+    <h2>What I work with</h2>
+    <div class="panel block">
+      <dl class="groups">
+        @for (group of groups; track group.label) {
+          <div>
+            <dt>{{ group.label }}</dt>
+            <dd>
+              <ul class="chips">
+                @for (item of group.items; track item) {
+                  <li class="chip">{{ item }}</li>
+                }
+              </ul>
+            </dd>
+          </div>
+        }
+      </dl>
+    </div>
+  </div>
+</section>

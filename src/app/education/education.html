@@ -1,0 +1,18 @@
+<section class="sec" id="education" data-node="education">
+  <div class="col">
+    <p class="eyebrow"><span class="verb">GET</span> /education</p>
+    <h2>Education</h2>
+    @for (item of items; track item.degree) {
+      <article class="panel block">
+        <div class="block-head">
+          <h3>{{ item.degree }}</h3>
+          <span class="meta">{{ item.period }}</span>
+        </div>
+        <p class="role">{{ item.college }}, {{ item.location }} · Affiliated to {{ item.affiliation }}</p>
+        @if (item.score) {
+          <ul class="chips"><li class="chip">{{ item.score }}</li></ul>
+        }
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="sec hero" id="top" data-node="0">
+  <div class="col hero-copy">
+    <p class="eyebrow rise"><span class="verb">GET</span> /ayush</p>
+    <h1 class="rise">{{ profile.firstName }}<br>{{ profile.lastName }}</h1>
+    <p class="lede rise">{{ profile.intro }}</p>
+    <div class="actions rise">
+      <a class="btn" href="#contact">Contact me</a>
+      <a class="btn ghost" href="#projects">See projects</a>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="panel term" role="group" aria-label="Sample API response describing Ayush">
+      <div class="term-bar"><span>GET /ayush</span><span class="ok">200 OK</span></div>
+<pre><code><span class="c">&#123;</span>
+@for (line of lines; track line.key; let last = $last) {  <span class="k">"{{ line.key }}"</span>: <span class="s">{{ line.value }}</span>{{ last ? '' : ',' }}
+}<span class="c">&#125;</span></code></pre>
+    </div>
+  </div>
+</section>
