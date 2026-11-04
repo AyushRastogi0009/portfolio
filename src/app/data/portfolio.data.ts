@@ -163,9 +163,40 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+ {
+    name: 'AI-Powered Call Auditing & Agent Performance Platform',
+    stack: ['Node.js', 'Express.js', 'Angular', 'TypeScript', 'MSSQL', 'REST APIs', 'OpenAI', 'Gemini', 'Sarvam AI', 'Deepgram'],
+    intro: 'Designed and built end to end. Audits 10-15K call recordings every day for 2 clients.',
+    modules: [
+      {
+        title: 'Audit dashboards',
+        text: 'Angular dashboards to track audits, review results and play call recordings in one place.',
+      },
+      {
+        title: 'Custom questionnaires',
+        text: 'Admins define their own criteria and weightage, so every call is scored the way the business wants.',
+      },
+      {
+        title: 'Automated scoring',
+        text: 'OpenAI checks each transcript against the questionnaire and returns Yes/No answers with weighted scores.',
+      },
+      {
+        title: 'Human-in-the-loop review',
+        text: 'Admins can listen to any call, evaluate it themselves, and override or assign the final score.',
+      },
+      {
+        title: 'Resilient transcription',
+        text: 'Sarvam AI handles speech-to-text, translation and text-to-speech, with Deepgram taking over automatically if it fails.',
+      },
+      {
+        title: 'Conversation insights',
+        text: 'Gemini adds speaker separation, call summaries, profanity detection and improvement suggestions for agents.',
+      },
+    ],
+  },
   {
     name: 'Enterprise Workforce & Task Management System',
-    stack: ['Node.js', 'Express.js', 'MSSQL', 'REST APIs', 'JWT', 'Swagger', 'Cron Jobs'],
+    stack: ['Node.js', 'Express.js', 'MSSQL', 'REST APIs'],
     modules: [
       {
         title: 'Task management',
